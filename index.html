@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+</head>
+<body>
+    <!-- 
+        1- create the navigation / done
+        2- the header / done
+        3- the flex container with the skills / done
+        4- the presentation and the profile / done
+        5- a slider with some of the work / done
+        6- a contact banner / done
+        7- another navigation / done
+     -->
+    <div class="wrapper">
+        <nav class="navigation">
+            <figure>
+                <img src="./images/logo.svg" alt="logo">
+            </figure>
+            <button >Free Consultation</button>
+        </nav>
+
+        <header class="main__header">
+            <h1>Design solutions made easy</h1>
+            <p>With over ten years of experience in various design disciplines, I'm your one-stop shop for your design needs.</p>
+        </header>
+
+        <div class="skills">
+
+            <div class="skills__left">
+                <p class="skills_font">Graphic Design</p>
+            </div>   
+
+            <div class="skills__center">
+                <div class="skilld__center_container">
+                    <p class="skills_font">UI/UX</p>
+                </div>
+                <div class="skilld__center_container">
+                    <p class="skills_font">Apps</p>
+                </div>
+                <div class="skilld__center_container">
+                    <p class="skills_font">Illustrations</p>
+                </div>
+            </div>
+
+            <div class="skills__right">
+                <div class="skilld__right_container">
+                    <p class="skills_font">Photography</p>
+                </div>
+                <div class="skilld__right_container">
+                    <p class="skills_font">Motion Graphics</p>
+                </div>
+            </div>    
+        </div>
+
+        <section class="presentation">
+            <figure>
+                <img src="./images/image-amy.webp" alt="amy profile picture">
+            </figure>
+            <div class="presentation__text">
+                <h2>I'm Amy, and I'd love to work on your next project</h2>
+                <p>I love working with others to create beautiful design solutions. I've designed everything from brand illustrations to complete mobile apps. I'm also handy with a camera!</p>
+                <button>Free Consultation</button>
+            </div>
+        </section>
+
+        <section>
+            <h3>My Work</h3>
+            <div class="swiper-container mySwiper" style="overflow: visible;">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+        
+                    <figure>
+                      <img src="images/image-slide-1.jpg" alt="anisha li illustration">
+                    </figure>
+
+                  
+        
+                  </div>
+                  <div class="swiper-slide">
+        
+                    <figure>
+                      <img src="images/image-slide-2.jpg" alt="ali bravo illustration">
+                    </figure>
+
+                  </div>
+        
+                  <div class="swiper-slide">
+        
+                    <figure>
+                      <img src="images/image-slide-3.jpg" alt="shout out to sean ranklin">
+                    </figure>
+
+                  </div>
+                  <div class="swiper-slide">
+        
+                    <figure>
+                      <img src="images/image-slide-4.jpg" alt="shout out to sean ranklin">
+                    </figure>
+
+                  </div>
+        
+                  <div class="swiper-slide">
+                    <figure>
+                      <img src="images/image-slide-5.jpg" alt="shanai Gough illustration">
+                    </figure>
+
+                  </div>
+                  <div class="swiper-slide" style="background-color: white;">
+        
+                  </div>
+                </div> 
+            </div>   
+        </section>
+
+        <section class="contact__banner">
+            <div class="contact__banner_text">
+                <h4>
+                    Book a call with me
+                </h4>
+                <p>I'd love to have a chat to see how I can help you. The best first step is for us to discuss your project during a free consultation. Then we can move forward from there.</p>
+            </div>
+            <button>Free Consultation</button>
+        </section>
+    
+        <nav class="navigation">
+            <figure>
+                <img src="./images/logo.svg" alt="logo">
+            </figure>
+            <button>Free Consultation</button>
+        </nav>
+    
+    </div>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+            slidesPerView: 0.5,
+            spaceBetween: 10,
+            },
+            768: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+            },
+            1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            },
+        },
+        });
+    </script>
+</body>
+</html>
