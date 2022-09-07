@@ -6,7 +6,8 @@
     --orange: #F6A560;
     --pink: #F39E9E;
     --redOrange: #EB7565;
-
+    --neon:#61C4B7;
+    --darkPurple:#552049;
 }
 
 /*
@@ -16,6 +17,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  
 }
 /*
     2. Remove default margin
@@ -30,6 +32,7 @@ html,
 body {
   height: 100%;
   font-family: 'Plus Jakarta Sans', sans-serif;
+
 }
 /*
     Typographic tweaks!
@@ -121,10 +124,202 @@ button.orange:hover{
 .skills{
     display: flex;
     flex-direction: column;
+    gap: 15px;
+}
+.skills__left, .skilld__right_container, .skilld__center_container{
+  position: relative;
 }
 .skills__left{
     width: 100%;
-    min-height: 300px;
+    min-height: 350px;
+    padding: 20px;
     background-color: var(--purple);
+    background-image: url(./images/pattern-graphic-design.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) 20px ;
+    border-radius: 15px;
+}
+
+.skills_font{
+  position: absolute;
+
+  bottom: 20px;
+  left: 20px;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  color:white ;
+}
+.skills__center{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.skills__center > *{
+  min-height: 175px;
+
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) 20px ;
+  border-radius: 15px;
+
+}
+.skilld__center_container:nth-child(1){
+  width: calc(50% - 15px);
+  background-color: var(--orange);
+  background-image: url(./images/pattern-ui-ux.svg);
+}
+.skilld__center_container:nth-child(2){
+  width: 50%;
+  background-color: var(--pink);
+  background-image: url(./images/pattern-apps.svg);
+}
+.skilld__center_container:nth-child(3){
+  width: 100%;
+  background-color: var(--redOrange);
+  background-image: url(./images/pattern-illustrations.svg);
+}
+
+.skills__right{
+  display: flex;
+  flex-direction: column;
+}
+.skills__right > * {
+  min-height: 160px;
+
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) 20px ;
+  border-radius: 15px;
+}
+.skilld__right_container:nth-child(1){
+  width: 100%;
+  background-color: var(--neon);
+  background-image: url(./images/pattern-photography.svg);
+}
+.skilld__right_container:nth-child(2){
+  width: 100%;
+  background-color: var(--darkPurple);
+  background-image: url(./images/pattern-motion-graphics.svg);
+  margin-top: 15px;
 }
 /* skills style */
+
+/* amy profile */
+
+.presentation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 15px;
+  row-gap: 50px;
+
+}
+.presentation figure img {
+  object-fit: contain;
+  width: 100%;
+
+}
+
+.presentation__text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 20px;
+}
+.presentation__text p{
+ color: var(--gray);
+}
+
+
+/* amy profile */
+
+/* swiper custom styles */
+
+.work h3{
+  text-align: center;
+  font-size: 25px;
+  margin: 25px 0;
+}
+.mySwiper{
+  cursor: grab;
+}
+.swiper-slide{
+  max-height: 350px;
+
+  border-radius: 15px;
+  overflow: hidden;
+
+
+}
+.swiper-slide figure image{
+  object-fit: cover;
+
+}
+.swiper-slide figure{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* swiper custom styles */
+
+/* contact banner */
+
+.contact__banner{
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+  background-color: var(--black);
+  padding:25px 10px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.contact__banner_text > *{
+  color: white;
+  text-align: center;
+}
+.contact__banner_text h4 {
+  font-size: 30px;
+
+}
+.contact__banner_text p {
+  margin: 20px 9px;
+
+}
+.contact__banner button{
+margin: 0 50px;
+}
+/* contact banner */
+
+/* tablet media query */
+
+@media screen and (min-width:700px) {
+ /* skills style */
+.skills{
+
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skills__left{
+  width: 49%;
+}
+
+
+.skills__center{
+width: 49%;
+}
+
+
+
+.skills__right{
+width: 100%;
+
+}
+
+/* skills style */
+}
+
+/* tablet media query */
