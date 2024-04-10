@@ -106,7 +106,7 @@ button.orange:hover {
   padding: 15px;
   margin: 15px 0;
 }
-.main__header h1 {
+.main__header .typewriter h1 {
   font-size: 45px;
   line-height: 3.5rem;
 }
@@ -114,8 +114,31 @@ button.orange:hover {
   color: var(--gray);
   margin-top: 20px;
 }
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--purple); /* The typwriter cursor */
 
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--purple); }
+}
 /* navigation style */
+
+
 
 /* skills style */
 .skills {
@@ -137,6 +160,11 @@ button.orange:hover {
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) 20px;
   border-radius: 15px;
+
+  transition: 300ms ease-in-out;
+}
+.skills__left:hover{
+  background-color: var(--neon);
 }
 
 .skills_font {
@@ -161,23 +189,34 @@ button.orange:hover {
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) 20px;
   border-radius: 15px;
+
+  transition: 300ms ease-in-out;
 }
 .skilld__center_container:nth-child(1) {
   width: calc(50% - 15px);
   background-color: var(--orange);
   background-image: url(./images/pattern-ui-ux.svg);
 }
+.skilld__center_container:nth-child(1):hover {
+  background-color: var(--darkPurple);
+
+}
 .skilld__center_container:nth-child(2) {
   width: 50%;
   background-color: var(--pink);
   background-image: url(./images/pattern-apps.svg);
+}
+.skilld__center_container:nth-child(2):hover {
+  background-color: var(--redOrange);
 }
 .skilld__center_container:nth-child(3) {
   width: 100%;
   background-color: var(--redOrange);
   background-image: url(./images/pattern-illustrations.svg);
 }
-
+.skilld__center_container:nth-child(3):hover {
+  background-color: var(--pink);
+}
 .skills__right {
   display: flex;
   flex-direction: column;
@@ -188,17 +227,26 @@ button.orange:hover {
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) 20px;
   border-radius: 15px;
+  transition: 300ms ease-in-out;
 }
 .skilld__right_container:nth-child(1) {
   width: 100%;
   background-color: var(--neon);
   background-image: url(./images/pattern-photography.svg);
 }
+.skilld__right_container:nth-child(1):hover {
+  background-color: var(--purple);
+
+}
 .skilld__right_container:nth-child(2) {
   width: 100%;
   background-color: var(--darkPurple);
   background-image: url(./images/pattern-motion-graphics.svg);
   margin-top: 15px;
+}
+.skilld__right_container:nth-child(2):hover {
+  background-color: var(--orange);
+
 }
 /* skills style */
 
@@ -212,11 +260,25 @@ button.orange:hover {
   margin: 50px 15px;
   row-gap: 50px;
 }
+@keyframes shake{
+  0%   { transform: rotate(0); }
+  50%  { transform: rotate(25deg); }
+  75%  { transform: rotate(-25deg); }
+  100% { transform: rotate(0); }
+}
+
 .presentation figure img {
   object-fit: contain;
   width: 100%;
 }
-
+.shake{
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.shake:hover{
+  animation-name: shake;
+  animation-timing-function: ease-in-out;
+}
 .presentation__text {
   display: flex;
   flex-direction: column;

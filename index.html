@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Amys's Design</title>
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   </head>
@@ -19,7 +20,9 @@
       </nav>
 
       <header class="main__header">
-        <h1>Design solutions made easy</h1>
+        <div class="typewriter">
+          <h1>Design solutions made easy</h1>
+        </div>
         <p>
           With over ten years of experience in various design disciplines, I'm
           your one-stop shop for your design needs.
@@ -55,7 +58,7 @@
 
       <section class="presentation">
         <figure>
-          <img src="./images/image-amy.webp" alt="amy profile picture" />
+          <img src="./images/image-amy.webp" alt="amy profile picture" class="shake"/>
         </figure>
         <div class="presentation__text">
           <h2>I'm Amy, and I'd love to work on your next project</h2>
@@ -150,11 +153,11 @@
         },
         breakpoints: {
           640: {
-            slidesPerView: 0.5,
+            slidesPerView: 1,
             spaceBetween: 10,
           },
           768: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 40,
           },
           1024: {
